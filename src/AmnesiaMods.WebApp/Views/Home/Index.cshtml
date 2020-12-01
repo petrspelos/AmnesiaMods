@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="columns">
+  <div class="column col-12">
+    <div class="hero bg-gray">
+      <div class="hero-body">
+        <h1>House of the Shadows</h1>
+        <p>
+          <span class="chip">Custom Story</span>
+          <span class="chip">First Attempt</span>
+          <span class="chip">Simple</span>
+          <span class="chip">❤️ 6</span>
+          <span class="chip">🔥 3</span>
+          <span class="chip">🥰 1</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="column col-8">
+    <ul class="menu">
+      <li class="divider" data-content="DESCRIPTION"></li>
+      <li class="menu-item">
+        <p>That evening you hardly rested, and if you managed to fall asleep, it was a restless sleep. Terrible nightmares heavily inflicted your mind. After many sleepless, hours you realised there is no change for a rest. You're watching boiling water, and you have no idea what terrible events hides under cover of the night. Creator: D4veCZ (creator of the mod Harms' Discovery), Czech Text Editing: Michal Paclt (Swankest CZ), English Translation: Sabatu</p>
+      </li>
+    </ul>
+  </div>
+  <div class="column">
+    <ul class="menu">
+      <li class="menu-item">
+        <div class="tile tile-centered">
+          <figure class="avatar">
+            <img src="https://picturepan2.github.io/spectre/img/avatar-3.png" alt="...">
+          </figure>
+          <div class="tile-content">SwankestCZ</div>
+        </div>
+      </li>
+      <li class="divider" data-content="RELEASE"></li>
+      <li class="menu-item">
+        <div class="tile tile-centered">
+          <div class="tile-icon">
+            <div class="icon-button">
+              <i class="icon icon-download centered"></i>
+            </div>
+          </div>
+          <div class="tile-content">
+            <div class="tile-title">houseofshadows.zip</div>
+            <small class="tile-subtitle text-gray">14MB · Public · 1 Jan, 2017</small>
+          </div>
+          <div class="tile-action">
+            <button class="btn btn-link">
+              <i class="icon icon-more-vert"></i>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li class="divider" data-content="USERS WHO FINISHED THIS MOD"></li>
+      <li class="menu-item">
+        <figure class="avatar">
+          <img src="https://picturepan2.github.io/spectre/img/avatar-3.png" alt="...">
+        </figure>
+        <figure class="avatar">
+          <img src="https://picturepan2.github.io/spectre/img/avatar-3.png" alt="...">
+        </figure>
+        <figure class="avatar">
+          <img src="https://picturepan2.github.io/spectre/img/avatar-3.png" alt="...">
+        </figure>
+        <figure class="avatar">
+          <img src="https://picturepan2.github.io/spectre/img/avatar-3.png" alt="...">
+        </figure>
+        <figure class="avatar">
+          <img src="https://picturepan2.github.io/spectre/img/avatar-3.png" alt="...">
+        </figure>
+        <figure class="avatar">
+          <img src="https://picturepan2.github.io/spectre/img/avatar-3.png" alt="...">
+        </figure>
+      </li>
+      <li class="menu-item">
+        <button class="btn btn-full-width" onclick="document.getElementById('played-modal').classList.add('active');">I finished this mod</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal modal-sm" id="played-modal">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="document.getElementById('played-modal').classList.remove('active');"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="document.getElementById('played-modal').classList.remove('active');"></a>
+      <div class="modal-title h5">How was it?</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <button class="btn btn-action s-circle" onclick="togglePrimary(this);">❤️</button>
+        <button class="btn btn-action s-circle" onclick="togglePrimary(this);">😂</button>
+        <button class="btn btn-action s-circle" onclick="togglePrimary(this);">💎</button>
+        <button class="btn btn-action s-circle" onclick="togglePrimary(this);">🔥</button>
+        <button class="btn btn-action s-circle" onclick="togglePrimary(this);">🎉</button>
+        <button class="btn btn-action s-circle" onclick="togglePrimary(this);">🥰</button>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-full-width" onclick="document.getElementById('played-modal').classList.remove('active');">Submit</button>
+    </div>
+  </div>
+</div>
+
+@section Scripts
+{
+  <script>
+    function togglePrimary(element) {
+      if(element.classList.contains('btn-primary'))
+        element.classList.remove('btn-primary');
+      else
+        element.classList.add('btn-primary');
+    }
+  </script>
+}

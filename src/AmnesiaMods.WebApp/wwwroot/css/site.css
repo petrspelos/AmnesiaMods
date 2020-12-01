@@ -1,0 +1,10 @@
+﻿.icon-button {
+  background-color: #8b00ff;
+  padding: 0.5em 0.8em;
+  color: white;
+  border-radius: 4px;
+}
+
+.btn-full-width {
+  width: 100%;
+}
